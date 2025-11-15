@@ -15,25 +15,25 @@ export default function TraitsSection({ data = TRAITS_PAGE }: Props) {
       <div className="grid grid-cols-1 md:grid-cols-12 gap-6 sm:gap-8 items-start">
         <div className="md:col-span-7 relative">
           <div className="hidden md:block absolute -left-14 top-0 bottom-0">
-            <div className="w-0.5 h-full bg-gray-200 mx-auto" />
+            <div className="w-0.5 h-full bg-theme-bg-300 mx-auto" />
             <div
-              className="w-3 h-3 rounded-full bg-white border-2 border-blue-200 absolute -left-1.5 top-4"
+              className="w-3 h-3 rounded-full bg-theme-bg border-2 border-theme-bg-300 absolute -left-1.5 top-4"
               aria-hidden
             />
           </div>
 
           <div className="mt-2 md:mt-0">
-            <p className="text-xs sm:text-sm text-gray-500 mb-3 sm:mb-4">
+            <p className="text-xs sm:text-sm text-theme-fg-400 mb-3 sm:mb-4">
               {data.date}
             </p>
-            <h2 className="text-lg sm:text-2xl md:text-3xl font-semibold mb-3 sm:mb-4">
+            <h2 className="text-lg sm:text-2xl md:text-3xl font-semibold mb-3 sm:mb-4 text-theme-fg">
               {data.heading}
             </h2>
-            <p className="text-sm sm:text-base text-gray-700 mb-3 sm:mb-4 max-w-prose">
+            <p className="text-sm sm:text-base text-theme-fg-300 mb-3 sm:mb-4 max-w-prose">
               {data.intro}
             </p>
             {data.subIntro && (
-              <p className="text-sm sm:text-base text-gray-700 mb-4 sm:mb-6">
+              <p className="text-sm sm:text-base text-theme-fg-300 mb-4 sm:mb-6">
                 {data.subIntro}
               </p>
             )}
@@ -45,16 +45,16 @@ export default function TraitsSection({ data = TRAITS_PAGE }: Props) {
                   className="flex gap-3 sm:gap-4 md:gap-6 items-start"
                 >
                   <div className="flex-shrink-0">
-                    <span className="font-semibold text-base sm:text-lg">
+                    <span className="font-semibold text-base sm:text-lg text-theme-fg-200">
                       {idx + 1}.
                     </span>
                   </div>
 
                   <div>
-                    <h3 className="text-sm sm:text-base font-medium text-gray-900">
+                    <h3 className="text-sm sm:text-base font-medium text-theme-fg">
                       {it.title}
                     </h3>
-                    <p className="text-xs sm:text-sm md:text-base text-gray-600 mt-1 max-w-prose">
+                    <p className="text-xs sm:text-sm md:text-base text-theme-fg-300 mt-1 max-w-prose">
                       {it.body}
                     </p>
                   </div>

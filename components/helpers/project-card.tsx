@@ -11,23 +11,23 @@ export default function ProjectCard({ project }: Props) {
   const techs = project.techs ?? [];
 
   return (
-    <article className="group bg-white rounded-2xl border border-gray-100 shadow-xl hover:shadow-lg transition-shadow duration-200 overflow-hidden h-full">
+    <article className="group bg-theme-bg-200 rounded-2xl border border-theme-bg-300 shadow-theme-lg hover:shadow-theme-xl transition-shadow duration-200 overflow-hidden h-full">
       <div className="flex flex-col md:flex-row h-full">
         <div className="p-6 md:flex-1 md:pr-4 lg:pr-6 flex flex-col justify-between">
           <div>
             <header>
-              <h3 className="text-lg font-semibold text-gray-900">
+              <h3 className="text-lg font-semibold text-theme-fg">
                 {project.title}
               </h3>
               {project.subtitle && (
-                <p className="mt-1 text-sm text-gray-500">{project.subtitle}</p>
+                <p className="mt-1 text-sm text-theme-fg-400">{project.subtitle}</p>
               )}
             </header>
 
-            <p className="mt-4 text-sm text-gray-700">{project.description}</p>
+            <p className="mt-4 text-sm text-theme-fg-300">{project.description}</p>
 
             {bullets.length > 0 && (
-              <ul className="mt-4 space-y-2 text-sm text-gray-600 list-disc list-inside">
+              <ul className="mt-4 space-y-2 text-sm text-theme-fg-300 list-disc list-inside">
                 {bullets.map((b, i) => (
                   <li key={i} className="leading-snug">
                     {b}
@@ -41,7 +41,7 @@ export default function ProjectCard({ project }: Props) {
                 {techs.map((t, i) => (
                   <span
                     key={i}
-                    className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-gray-100 text-gray-800"
+                    className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-theme-bg-300 text-theme-fg-200"
                   >
                     {t}
                   </span>
@@ -57,7 +57,7 @@ export default function ProjectCard({ project }: Props) {
                 href={project.github}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-gray-200 text-sm font-medium text-gray-800 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                className="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-theme-bg-300 text-sm font-medium text-theme-fg-200 hover:bg-theme-bg-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors"
                 aria-label={`${project.title} on GitHub`}
               >
                 <svg

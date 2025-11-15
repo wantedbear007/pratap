@@ -7,12 +7,12 @@ export default function Navbar() {
       <div className="text-lg sm:text-xl md:text-2xl font-semibold font-stack-headline text-theme-fg flex items-center gap-2">
         {USER_DATA.name}
         {BETA && (
-          <span className="px-2 py-0.5 text-xs font-medium rounded-md bg-theme-fg/10 text-theme-fg bg-amber-200">
+          <span className="px-2 py-0.5 text-xs font-medium rounded-md bg-amber-200 dark:bg-amber-800 text-amber-900 dark:text-amber-100">
             BETA
           </span>
         )}
       </div>
-      {/* <ThemeToggle /> */}
+      <ThemeToggle />
     </nav>
   );
 }

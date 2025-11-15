@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Stack+Sans+Headline:wght@200..700&display=swap');
 
 :root {
   /* Light theme - shades of white */
