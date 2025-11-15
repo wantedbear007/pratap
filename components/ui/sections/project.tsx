@@ -13,7 +13,7 @@ export default function ProjectsGrid({ projects }: Props) {
         Projects
       </h2>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
         {projects.map((p) => (
           <ProjectCard key={p.id} project={p} />
         ))}

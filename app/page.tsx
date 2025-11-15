@@ -7,6 +7,7 @@ import Image from "next/image";
 import { ReactNode, useState } from "react";
 import ProjectsGrid from "@/components/ui/sections/project";
 import { PROJECTS } from "@/content/user-data";
+import Footer from "@/components/ui/sections/footer";
 
 type Props = {
   children?: ReactNode;
@@ -33,6 +34,7 @@ export default function Home() {
         <Experience />
         <ProjectsGrid projects={PROJECTS} />
       </PageContainer>
+      <Footer />
     </>
   );
 }

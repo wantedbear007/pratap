@@ -45,7 +45,7 @@ export default function TraitsSection({ data = TRAITS_PAGE }: Props) {
                   className="flex gap-3 sm:gap-4 md:gap-6 items-start"
                 >
                   <div className="flex-shrink-0">
-                    <span className="text-yellow-400 font-semibold text-base sm:text-lg">
+                    <span className="font-semibold text-base sm:text-lg">
                       {idx + 1}.
                     </span>
                   </div>
@@ -71,10 +71,10 @@ export default function TraitsSection({ data = TRAITS_PAGE }: Props) {
             className="w-full max-w-sm rounded-xl overflow-hidden shadow-lg"
             aria-hidden={false}
           >
-            <div className="relative aspect-[4/3]">
+            <div className="relative aspect-[4/2]">
               <Image
                 src={data.image}
-                alt="attention to detail"
+                alt=""
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
                 className="object-cover"
@@ -85,11 +85,7 @@ export default function TraitsSection({ data = TRAITS_PAGE }: Props) {
                 <h3
                   className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-extrabold text-black text-center drop-shadow-sm"
                   style={{ lineHeight: 1.05 }}
-                >
-                  Attention to
-                  <br />
-                  detail
-                </h3>
+                ></h3>
               </div>
             </div>
           </motion.div>

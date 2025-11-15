@@ -1,6 +1,8 @@
 import { Project } from "@/types/project.t";
 import { TraitsPage } from "@/types/traints.t";
 
+export const BETA = true;
+
 export const USER_DATA = {
   name: "Bhanupratap Singh",
 
@@ -25,6 +27,9 @@ export const USER_DATA = {
   instagram: "https://instagram.com/bhanupratapsingh",
 
   facebook: "https://facebook.com/bhanupratapsingh",
+
+  resume:
+    "https://drive.google.com/file/d/10WTX285lIoyUWMopgEH6E7Ib-amKcsXp/view?usp=sharing",
 };
 
 export const TAG_LINES = {
@@ -62,7 +67,7 @@ export const TRAITS_PAGE: TraitsPage = {
   intro:
     "During my time at QuadB Technologies (Division kaiFoundry), I’ve worked across backend development, system optimization, and infrastructure automation. My work has focused on improving reliability, performance, and developer experience for systems that handle financial transactions and high-volume traffic.",
   subIntro: "Here are the key areas where I contributed:",
-  image: "/images/experience.png", // update as needed
+  image: "/backgrounds/exp.jpg",
   items: [
     {
       title: "Secure system design",
@@ -103,7 +108,7 @@ export const PROJECTS: Project[] = [
       "Developed an onchain storage platfrom for media files of platform",
       "Production deployment & developer tooling for IC canisters.",
     ],
-    image: "/images/tv-compose.png",
+    image: "/backgrounds/cardbg1.jpg",
     imageAlt: "Graphics",
     live: "https://7qxcw-pyaaa-aaaaj-qnf6a-cai.icp0.io",
     techs: ["Rust", "dfinity", "bash"],
@@ -119,9 +124,25 @@ export const PROJECTS: Project[] = [
       "Allows users to upload PDF documents, store them aws and then process them for further usage.",
       "Uses an LLM or retrieval-augmented generation to respond to user questions.",
     ],
-    image: "/images/design-systems.png",
+    image: "/backgrounds/card2.jpg",
     imageAlt: "Graphics",
     github: "https://github.com/wantedbear007/Guardian-assist",
     techs: ["Python", "FastAPI", "Langchain", "React"],
   },
 ];
+
+export const FOOTER_DATA = {
+  title: "Oh, hello.",
+
+  description:
+    "Feel free to reach out for collaborations or just a friendly hello.",
+
+  email: "me@prataptechnologies.me",
+  socials: [
+    { name: "Twitter", url: "https://x.com/pratapbhanu17" },
+    { name: "Github", url: "https://github.com/wantedbear007" },
+    { name: "LinkedIn", url: "https://www.linkedin.com/in/wantedbear007/" },
+    { name: "Resume", url: USER_DATA.resume },
+  ],
+  image: "/backgrounds/footer.jpg",
+};

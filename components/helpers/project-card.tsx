@@ -11,7 +11,7 @@ export default function ProjectCard({ project }: Props) {
   const techs = project.techs ?? [];
 
   return (
-    <article className="group bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow duration-200 overflow-hidden h-full">
+    <article className="group bg-white rounded-2xl border border-gray-100 shadow-xl hover:shadow-lg transition-shadow duration-200 overflow-hidden h-full">
       <div className="flex flex-col md:flex-row h-full">
         <div className="p-6 md:flex-1 md:pr-4 lg:pr-6 flex flex-col justify-between">
           <div>
