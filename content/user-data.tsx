@@ -5,6 +5,8 @@ export const USER_DATA = {
 
   jobTitle: "Software Engineer",
 
+  org: "KaiFoundry",
+
   location: "India",
 
   email: "bhanupratapsingh@gmail.com",
@@ -23,13 +25,30 @@ export const USER_DATA = {
 };
 
 export const TAG_LINES = {
+  // check for hero.tsx for impl
+  heroSection: {
+    sentence:
+      "Backend engineer who treats performance bottlenecks the same way Thanos treats half the universe—perfectly balanced.",
 
-    // check for hero.tsx for impl
-    heroSection: {
-      sentence: "Backend engineer who treats performance bottlenecks the same way Thanos treats half the universe—perfectly balanced.",
+    highlight: [
+      "performance",
+      "bottlenecks",
+      "Thanos",
+      "treats",
+      "half",
+      "the",
+      "universe—perfectly",
+      "balanced.",
+    ],
+  },
 
-      highlight: ["performance", "bottlenecks", "Thanos", "treats", "half", "the", "universe—perfectly", "balanced."]
+  subText: {
+    pre: `Now building and optimizing backend services at ${USER_DATA.org}, focusing on microservices, performance, and secure architectures.`,
+    
+    post: "Based in India",
+  },
+};
 
-    }
-
+export const IMAGES_PATH = {
+  small_profile: "/profile/small_dp.png",
 };

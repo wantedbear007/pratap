@@ -1,6 +1,10 @@
+
+
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Stack_Sans_Headline } from "next/font/google";
 import "./globals.css";
+import Providers from "./providers";
+
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -11,6 +15,11 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const stack = Stack_Sans_Headline({
+  variable: "--font-stack-sans-headline",
+  subsets: ['latin']
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -23,11 +32,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html suppressHydrationWarning lang="en" >
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${stack.variable} antialiased min-h-screen 
+  bg-theme-bg text-theme-fg
+  transition-colors duration-300`}
       >
-        {children}
+        <Providers>{children}</Providers>
+        {/* {children} */}
       </body>
     </html>
   );
