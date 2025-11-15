@@ -20,11 +20,15 @@ export default function ProjectCard({ project }: Props) {
                 {project.title}
               </h3>
               {project.subtitle && (
-                <p className="mt-1 text-sm text-theme-fg-400">{project.subtitle}</p>
+                <p className="mt-1 text-sm text-theme-fg-400">
+                  {project.subtitle}
+                </p>
               )}
             </header>
 
-            <p className="mt-4 text-sm text-theme-fg-300">{project.description}</p>
+            <p className="mt-4 text-sm text-theme-fg-300">
+              {project.description}
+            </p>
 
             {bullets.length > 0 && (
               <ul className="mt-4 space-y-2 text-sm text-theme-fg-300 list-disc list-inside">

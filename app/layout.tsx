@@ -19,8 +19,9 @@ const stack = Stack_Sans_Headline({
 });
 
 export const metadata: Metadata = {
-  title: "pratap Beta",
-  description: "Portfolio of Bhanupratap Singh",
+  title: "Bhanupratap Singh",
+  description: "Backend engineer developing scalable systems.",
+
 };
 
 export default function RootLayout({
@@ -30,11 +31,13 @@ export default function RootLayout({
 }>) {
   return (
     <html suppressHydrationWarning lang="en">
+      <meta property="og:image" content="/backgrounds/metabg.png" />
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${stack.variable} antialiased min-h-screen 
   bg-theme-bg text-theme-fg
   transition-colors duration-300`}
       >
+        
         <Providers>{children}</Providers>
         {/* {children} */}
       </body>
