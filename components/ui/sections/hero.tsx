@@ -4,6 +4,7 @@ import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
 import { IMAGES_PATH, TAG_LINES, USER_DATA } from "@/content/user-data";
 import { HighlightText } from "../enhancers/highlight-text";
+import { GlowButton } from "@/components/buttons/glow-button";
 
 export default function HeroSection() {
 
@@ -26,7 +27,7 @@ export default function HeroSection() {
     >
 
       {/* Greeting card */}
-      <div className="flex items-center gap-4 mb-10 w-full max-w-7xl">
+      <div className="flex items-center gap-4 mb-10 w-full ">
         <Image
           src={IMAGES_PATH.small_profile}
           alt="profile"
@@ -51,20 +52,25 @@ export default function HeroSection() {
       />
 
       {/* Sub text */}
-      <p className="w-full max-w-7xl mt-6 text-theme-fg-300 text-lg">
+      <p className="w-full mt-6 text-theme-fg-300 text-lg">
         {TAG_LINES.subText.pre}
         <br />
+        <br />
+
         {TAG_LINES.subText.post}
       </p>
+      <div className="w-full flex justify-start mt-8">
+  <GlowButton text="Download resume" />
+</div>
 
       {/* Moving logo strip */}
       <div
         className={
-          "w-full overflow-hidden mt-14 py-4 border-t border-b " +
-          "border-theme-bg-300"
+          "w-full overflow-hidden mt-14 py-4 " +
+          "border-theme-bg-600"
         }
       >
-        <motion.div
+        {/* <motion.div
           className="flex items-center gap-20 whitespace-nowrap"
           animate={{ x: [0, -600] }}
           transition={{ repeat: Infinity, duration: 10, ease: "linear" }}
@@ -74,7 +80,7 @@ export default function HeroSection() {
           <Image src={logo("/gojek.png")} alt="gojek" width={120} height={40} />
           <Image src={logo("/careem.png")} alt="careem" width={120} height={40} />
           <Image src={logo("/aura.png")} alt="aura" width={120} height={40} />
-        </motion.div>
+        </motion.div> */}
       </div>
     </section>
   );
