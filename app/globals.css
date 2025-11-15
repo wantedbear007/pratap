@@ -19,8 +19,10 @@
   /* Light theme shadows - dark shadows for light background */
   --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
-  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --shadow-lg:
+    0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl:
+    0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
 }
 
 .dark {
@@ -41,9 +43,15 @@
   --foreground-600: #ff0000;
   /* Dark theme shadows - lighter/glowing shadows for dark background */
   --shadow-sm: 0 1px 2px 0 rgb(255 255 255 / 0.05);
-  --shadow-md: 0 4px 6px -1px rgb(255 255 255 / 0.1), 0 2px 4px -2px rgb(255 255 255 / 0.05);
-  --shadow-lg: 0 10px 15px -3px rgb(255 255 255 / 0.1), 0 4px 6px -4px rgb(255 255 255 / 0.05);
-  --shadow-xl: 0 20px 25px -5px rgb(255 255 255 / 0.15), 0 8px 10px -6px rgb(255 255 255 / 0.1);
+  --shadow-md:
+    0 4px 6px -1px rgb(255 255 255 / 0.1),
+    0 2px 4px -2px rgb(255 255 255 / 0.05);
+  --shadow-lg:
+    0 10px 15px -3px rgb(255 255 255 / 0.1),
+    0 4px 6px -4px rgb(255 255 255 / 0.05);
+  --shadow-xl:
+    0 20px 25px -5px rgb(255 255 255 / 0.15),
+    0 8px 10px -6px rgb(255 255 255 / 0.1);
 }
 
 @theme inline {
@@ -71,7 +79,9 @@ body {
   color: var(--foreground);
   /* font-family: Arial, Helvetica, sans-serif;
    */
-   font-family: "Stack Sans Headline", sans-serif;
-   font-optical-sizing: auto;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-family: "Stack Sans Headline", sans-serif;
+  font-optical-sizing: auto;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }

@@ -1,3 +1,4 @@
+import { Project } from "@/types/project.t";
 import { TraitsPage } from "@/types/traints.t";
 
 export const USER_DATA = {
@@ -46,7 +47,7 @@ export const TAG_LINES = {
 
   subText: {
     pre: `Now building and optimizing backend services at ${USER_DATA.org}, focusing on microservices, performance, and secure architectures.`,
-    
+
     post: "Based in India",
   },
 };
@@ -55,45 +56,72 @@ export const IMAGES_PATH = {
   small_profile: "/profile/small_dp.png",
 };
 
-
-
 export const TRAITS_PAGE: TraitsPage = {
-  date: "21 Apr, 2025",
-  heading: "Key traits for success",
+  date: "May 2024 – Present",
+  heading: "Experience at QuadB Technologies",
   intro:
-    "Last week, I wrote about having a bias towards action—and a few people reached out asking, “What other qualities do you really value in teammates?”",
-  subIntro: "Here are 6 traits I look up to and try to practice myself:",
-  image: "/images/attention.png", // put image at public/images/attention.png
+    "During my time at QuadB Technologies (Division kaiFoundry), I’ve worked across backend development, system optimization, and infrastructure automation. My work has focused on improving reliability, performance, and developer experience for systems that handle financial transactions and high-volume traffic.",
+  subIntro: "Here are the key areas where I contributed:",
+  image: "/images/experience.png", // update as needed
   items: [
     {
-      title: "Bias towards action",
-      body:
-        "They don't wait for the perfect plan—they just start. They move things forward when others hesitate."
+      title: "Secure system design",
+      body: "Designed and built an encrypted endpoint routing system used for financial transactions. It improved backend reliability, tightened API security, and reduced exposure of sensitive routes.",
     },
     {
-      title: "Attention to detail",
-      body:
-        "Nothing is too small to fix. Whether it's a misaligned slide or a mismatched color, they care enough to make it right. That mindset compounds."
+      title: "SEO engineering with Go",
+      body: "Introduced an SEO-friendly React setup by creating a lightweight Go proxy server to generate dynamic meta tags, enabling accurate social media previews for dynamic pages.",
     },
     {
-      title: "Cautious ambition",
-      body:
-        "It's easy to be ambitious. Harder to be ambitious and realistic. The best people know how to read the room, aim high—and still stay grounded."
+      title: "Microservice migration",
+      body: "Migrated three monolithic backends into Node.js (Express) and Spring Boot microservices, integrating Redis caching to boost API response times by 30–40% and support 10K+ daily requests.",
     },
     {
-      title: "Respect for the problem",
-      body:
-        "They don't rush to solutions or hide behind “first principles.” They pause. Think. Put in the time a real problem deserves."
+      title: "Fixing performance bottlenecks",
+      body: "Took ownership of a backend suffering from heavy database failures. Replaced nested manual queries with ORM-driven optimized queries, resolving bottlenecks and stabilizing the system.",
     },
     {
-      title: "Consistency",
-      body:
-        "Not once. Not twice. But every single time. These are the people you can count on."
+      title: "CI/CD automation",
+      body: "Built a complete CI/CD pipeline that replaced manual deployment steps and reduced production deployment time by more than 80%.",
     },
     {
-      title: "Empathy",
-      body:
-        "They try to understand teammates and users. That empathy shapes better decisions and kinder feedback."
-    }
-  ]
+      title: "Backend development & documentation",
+      body: "Developed scalable RESTful APIs and backend services in Node.js and Spring Boot, documented system workflows, and containerized services with Docker to simplify deployments and eliminate dependency issues.",
+    },
+  ],
 };
+
+export const PROJECTS: Project[] = [
+  {
+    id: "tv-compose",
+    title: "DexFans",
+    subtitle: "Rust Backend",
+    description:
+      "A decentralized social media backend built in Rust on the Internet Computer, using stable memory for fast, upgrade-safe on-chain data.",
+    bullets: [
+      "Multi canisters(smart contract) implementation that scales with requirements.",
+      "Developed an onchain storage platfrom for media files of platform",
+      "Production deployment & developer tooling for IC canisters.",
+    ],
+    image: "/images/tv-compose.png",
+    imageAlt: "Graphics",
+    live: "https://7qxcw-pyaaa-aaaaj-qnf6a-cai.icp0.io",
+    techs: ["Rust", "dfinity", "bash"],
+  },
+  {
+    id: "design-systems",
+    title: "Guardian Assist",
+    subtitle: "Full Stack AI RAG",
+    description:
+      "A full-stack web app that lets users upload PDFs to AWS S3, and then chat with the document’s content via a conversational interface.",
+    bullets: [
+      "Turns static documents into interactive searchable assets",
+      "Allows users to upload PDF documents, store them aws and then process them for further usage.",
+      "Uses an LLM or retrieval-augmented generation to respond to user questions.",
+    ],
+    image: "/images/design-systems.png",
+    imageAlt: "Graphics",
+    github: "https://github.com/wantedbear007/Guardian-assist",
+    techs: ["Python", "FastAPI", "Langchain", "React"],
+  },
+];

@@ -19,7 +19,7 @@ export const HighlightText = (args: highlightTextArgs) => {
       className={
         args.classNameData
           ? args.classNameData
-          : "w-full  text-[3.5rem] font-stack-headline leading-snug font-light "
+          : "w-full text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-[3.5rem] font-stack-headline leading-tight sm:leading-snug font-light"
       }
     >
       {args.setence.split(" ").map((word, idx) => (

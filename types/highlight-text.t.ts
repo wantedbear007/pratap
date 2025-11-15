@@ -1,5 +1,3 @@
-
-
 export type highlightTextArgs = {
   // complete sentence or line
   setence: string;

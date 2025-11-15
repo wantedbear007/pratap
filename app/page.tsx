@@ -2,14 +2,16 @@
 
 import HeroSection from "@/components/ui/sections/hero";
 import Navbar from "@/components/ui/sections/navbar";
-import { Projects } from "@/components/ui/sections/projects";
+import { Experience } from "@/components/ui/sections/experience";
 import Image from "next/image";
 import { ReactNode, useState } from "react";
+import ProjectsGrid from "@/components/ui/sections/project";
+import { PROJECTS } from "@/content/user-data";
 
 type Props = {
   children?: ReactNode;
   className?: string;
-  };
+};
 
 export function PageContainer({ children, className = "" }: Props) {
   return (
@@ -25,10 +27,11 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      
+
       <PageContainer>
         <HeroSection />
-        <Projects />
+        <Experience />
+        <ProjectsGrid projects={PROJECTS} />
       </PageContainer>
     </>
   );
