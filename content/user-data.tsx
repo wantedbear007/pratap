@@ -10,7 +10,7 @@ export const USER_DATA = {
 
   jobTitle: "Software Engineer",
 
-  org: "KaiFoundry",
+  org: "Griphic (Skets Studio)",
 
   location: "India",
 
@@ -51,7 +51,7 @@ export const TAG_LINES = {
   },
 
   subText: {
-    pre: `Now building and optimizing backend services at ${USER_DATA.org}, focusing on microservices, performance, and secure architectures.`,
+    pre: `Now building and optimizing backend services at ${USER_DATA.org}, focusing on stability, performance, and secure architectures.`,
 
     post: "Based in India",
   },
@@ -62,7 +62,7 @@ export const IMAGES_PATH = {
 };
 
 export const TRAITS_PAGE: TraitsPage = {
-  date: "May 2024 – Present",
+  date: "May 2024 – February 2026",
   heading: "Experience at QuadB Technologies",
   intro:
     "During my time at QuadB Technologies (Division kaiFoundry), I’ve worked across backend development, system optimization, and infrastructure automation. My work has focused on improving reliability, performance, and developer experience for systems that handle financial transactions and high-volume traffic.",
