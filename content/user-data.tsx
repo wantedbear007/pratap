@@ -110,7 +110,7 @@ export const PROJECTS: Project[] = [
     ],
     image: "/backgrounds/cardbg1.jpg",
     imageAlt: "Graphics",
-    live: "https://7qxcw-pyaaa-aaaaj-qnf6a-cai.icp0.io",
+    live: "",
     techs: ["Rust", "dfinity", "bash"],
   },
   {
@@ -137,7 +137,7 @@ export const FOOTER_DATA = {
   description:
     "Feel free to reach out for collaborations or just a friendly hello.",
 
-  email: "me@prataptechnologies.me",
+  email: "me@pratap.world",
   socials: [
     { name: "Twitter", url: "https://x.com/pratapbhanu17" },
     { name: "Github", url: "https://github.com/wantedbear007" },
