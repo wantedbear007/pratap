@@ -1,5 +1,6 @@
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Project } from "@/types/project.t";
 
 type Props = {
@@ -98,6 +99,27 @@ export default function ProjectCard({ project }: Props) {
                 </svg>
                 Live
               </a>
+            )}
+
+            {project.page && (
+              <Link
+                href={project.page}
+                className="inline-flex items-center gap-2 px-3 py-2 rounded-md border border-theme-bg-300 text-sm font-medium text-theme-fg-200 hover:bg-theme-bg-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors"
+                aria-label={`View details for ${project.title}`}
+              >
+                <svg
+                  className="w-4 h-4"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  aria-hidden
+                >
+                  <path d="M12 5v14" />
+                  <path d="M5 12h14" />
+                </svg>
+                Details
+              </Link>
             )}
           </div>
         </div>

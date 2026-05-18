@@ -61,40 +61,65 @@ export const IMAGES_PATH = {
   small_profile: "/profile/small_dp.png",
 };
 
-export const TRAITS_PAGE: TraitsPage = {
-  date: "May 2024 – February 2026",
-  heading: "Experience at QuadB Technologies",
-  intro:
-    "During my time at QuadB Technologies (Division kaiFoundry), I’ve worked across backend development, system optimization, and infrastructure automation. My work has focused on improving reliability, performance, and developer experience for systems that handle financial transactions and high-volume traffic.",
-  subIntro: "Here are the key areas where I contributed:",
-  image: "/backgrounds/exp.jpg",
-  items: [
-    {
-      title: "Secure system design",
-      body: "Designed and built an encrypted endpoint routing system used for financial transactions. It improved backend reliability, tightened API security, and reduced exposure of sensitive routes.",
-    },
-    {
-      title: "SEO engineering with Go",
-      body: "Introduced an SEO-friendly React setup by creating a lightweight Go proxy server to generate dynamic meta tags, enabling accurate social media previews for dynamic pages.",
-    },
-    {
-      title: "Microservice migration",
-      body: "Migrated three monolithic backends into Node.js (Express) and Spring Boot microservices, integrating Redis caching to boost API response times by 30–40% and support 10K+ daily requests.",
-    },
-    {
-      title: "Fixing performance bottlenecks",
-      body: "Took ownership of a backend suffering from heavy database failures. Replaced nested manual queries with ORM-driven optimized queries, resolving bottlenecks and stabilizing the system.",
-    },
-    {
-      title: "CI/CD automation",
-      body: "Built a complete CI/CD pipeline that replaced manual deployment steps and reduced production deployment time by more than 80%.",
-    },
-    {
-      title: "Backend development & documentation",
-      body: "Developed scalable RESTful APIs and backend services in Node.js and Spring Boot, documented system workflows, and containerized services with Docker to simplify deployments and eliminate dependency issues.",
-    },
-  ],
-};
+export const TRAITS_PAGE: TraitsPage[] = [
+
+  {
+    date: "February 2026 – Present",
+    heading: "Experience at Griphic (Skets Studio)",
+    intro:
+      "At Griphic, I’ve been focused on backend reliability, distributed system resilience, and platform security. My work centers around building fault-tolerant infrastructure and improving authentication and service stability for production systems.",
+    subIntro: "Here are the key areas where I contributed:",
+    image: "/backgrounds/skets.jpg",
+    items: [
+      {
+        title: "Secure authentication architecture",
+        body: "Migrated authentication from localStorage to a secure HTTP-only cookie-based architecture with token rotation, significantly improving protection against XSS attacks.",
+      },
+      {
+        title: "Automated backend health monitoring",
+        body: "Built a background health-check system in Go using goroutines to periodically monitor backend services, automatically marking unhealthy services after configurable retry thresholds and rechecking them for recovery.",
+      },
+      {
+        title: "Circuit breaker implementation",
+        body: "Implemented a per-upstream 3-state circuit breaker system (closed, open, half-open) with configurable thresholds and cooldown timing to prevent cascading failures and improve service resilience.",
+      },
+    ],
+  },
+  {
+    date: "May 2024 – February 2026",
+    heading: "Experience at QuadB Technologies",
+    intro:
+      "During my time at QuadB Technologies (Division kaiFoundry), I’ve worked across backend development, system optimization, and infrastructure automation. My work has focused on improving reliability, performance, and developer experience for systems that handle financial transactions and high-volume traffic.",
+    subIntro: "Here are the key areas where I contributed:",
+    image: "/backgrounds/exp.jpg",
+    items: [
+      {
+        title: "Secure system design",
+        body: "Designed and built an encrypted endpoint routing system used for financial transactions. It improved backend reliability, tightened API security, and reduced exposure of sensitive routes.",
+      },
+      {
+        title: "SEO engineering with Go",
+        body: "Introduced an SEO-friendly React setup by creating a lightweight Go proxy server to generate dynamic meta tags, enabling accurate social media previews for dynamic pages.",
+      },
+      {
+        title: "Microservice migration",
+        body: "Migrated three monolithic backends into Node.js (Express) and Spring Boot microservices, integrating Redis caching to boost API response times by 30–40% and support 10K+ daily requests.",
+      },
+      {
+        title: "Fixing performance bottlenecks",
+        body: "Took ownership of a backend suffering from heavy database failures. Replaced nested manual queries with ORM-driven optimized queries, resolving bottlenecks and stabilizing the system.",
+      },
+      {
+        title: "CI/CD automation",
+        body: "Built a complete CI/CD pipeline that replaced manual deployment steps and reduced production deployment time by more than 80%.",
+      },
+      {
+        title: "Backend development & documentation",
+        body: "Developed scalable RESTful APIs and backend services in Node.js and Spring Boot, documented system workflows, and containerized services with Docker to simplify deployments and eliminate dependency issues.",
+      },
+    ],
+  },
+];
 
 export const PROJECTS: Project[] = [
   {
@@ -106,14 +131,14 @@ export const PROJECTS: Project[] = [
     bullets: [
       "Built a provider plugin architecture supporting GitHub, Cloudflare, Google, Vercel, Telegram, and infrastructure providers through a unified integration system.",
       "Implemented SSH-based infrastructure orchestration with Docker, nginx, systemd, cron, deployments, backups, metrics, and package management without requiring agents.",
-      "Developed a deny-by-default RBAC engine with policy documents, provider-scoped permissions, role templates, audit logging, and encrypted credential management.",
+      // "Developed a deny-by-default RBAC engine with policy documents, provider-scoped permissions, role templates, audit logging, and encrypted credential management.",
       "Created a Docker-isolated multi-runtime job runner supporting Python, Bash, and Node.js workloads with scheduling, retries, resource limits, and encrypted secrets.",
-      "Designed a dynamic provider-driven frontend workspace where navigation, tabs, and panels are generated entirely from backend metadata."
     ],
     image: "/backgrounds/cardbg1.jpg",
     imageAlt: "Nexctl Infrastructure Control Plane Dashboard",
     // github: "https://github.com/your-username/nexctl",
     live: "https://nexctl.pratap.world",
+    page: "/nexctl",
     techs: [
       "Go",
       "Fiber",

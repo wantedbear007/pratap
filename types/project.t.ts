@@ -8,5 +8,6 @@ export type Project = {
   imageAlt?: string;
   github?: string;
   live?: string;
+  page?: string;
   techs?: string[];
 };
