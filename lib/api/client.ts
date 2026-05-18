@@ -28,9 +28,11 @@ export async function apiGet<T>(
   if (!res.ok) {
     let errorMessage = `Request failed with status ${res.status}`;
     try {
-      const errorBody = (await res.json()) as { error?: string };
+      const errorBody = (await res.json()) as { error?: string | { code?: string; message?: string } };
       if (errorBody.error) {
-        errorMessage = errorBody.error;
+        errorMessage = typeof errorBody.error === "string"
+          ? errorBody.error
+          : errorBody.error.message || `Request failed with status ${res.status}`;
       }
     } catch { }
     throw new ApiError(res.status, errorMessage);
