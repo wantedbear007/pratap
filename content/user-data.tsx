@@ -98,21 +98,54 @@ export const TRAITS_PAGE: TraitsPage = {
 
 export const PROJECTS: Project[] = [
   {
-    id: "tv-compose",
-    title: "DexFans",
-    subtitle: "Rust Backend",
+    id: "nexctl",
+    title: "Nexctl",
+    subtitle: "Unified Infrastructure Control Plane",
     description:
-      "A decentralized social media backend built in Rust on the Internet Computer, using stable memory for fast, upgrade-safe on-chain data.",
+      "An enterprise-grade infrastructure orchestration and multi-provider integration platform that centralizes SSH node management, RBAC, provider integrations, automation jobs, and secure credential handling into a single control plane.",
     bullets: [
-      "Multi canisters(smart contract) implementation that scales with requirements.",
-      "Developed an onchain storage platfrom for media files of platform",
-      "Production deployment & developer tooling for IC canisters.",
+      "Built a provider plugin architecture supporting GitHub, Cloudflare, Google, Vercel, Telegram, and infrastructure providers through a unified integration system.",
+      "Implemented SSH-based infrastructure orchestration with Docker, nginx, systemd, cron, deployments, backups, metrics, and package management without requiring agents.",
+      "Developed a deny-by-default RBAC engine with policy documents, provider-scoped permissions, role templates, audit logging, and encrypted credential management.",
+      "Created a Docker-isolated multi-runtime job runner supporting Python, Bash, and Node.js workloads with scheduling, retries, resource limits, and encrypted secrets.",
+      "Designed a dynamic provider-driven frontend workspace where navigation, tabs, and panels are generated entirely from backend metadata."
     ],
     image: "/backgrounds/cardbg1.jpg",
-    imageAlt: "Graphics",
-    live: "",
-    techs: ["Rust", "dfinity", "bash"],
+    imageAlt: "Nexctl Infrastructure Control Plane Dashboard",
+    // github: "https://github.com/your-username/nexctl",
+    live: "https://nexctl.pratap.world",
+    techs: [
+      "Go",
+      "Fiber",
+      "PostgreSQL",
+      "GORM",
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Docker",
+      "SSH",
+      "JWT",
+      "AES-GCM"
+    ]
   },
+  // {
+  //
+  //   id: "tv-compose",
+  //   title: "DexFans",
+  //   subtitle: "Rust Backend",
+  //   description:
+  //     "A decentralized social media backend built in Rust on the Internet Computer, using stable memory for fast, upgrade-safe on-chain data.",
+  //   bullets: [
+  //     "Multi canisters(smart contract) implementation that scales with requirements.",
+  //     "Developed an onchain storage platfrom for media files of platform",
+  //     "Production deployment & developer tooling for IC canisters.",
+  //   ],
+  //   image: "/backgrounds/cardbg1.jpg",
+  //   imageAlt: "Graphics",
+  //   live: "",
+  //   techs: ["Rust", "dfinity", "bash"],
+  // },
   {
     id: "design-systems",
     title: "Guardian Assist",
