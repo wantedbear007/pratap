@@ -78,7 +78,7 @@ export default function BlogsPage() {
             </h1>
             <p className="mt-2 text-sm sm:text-base text-theme-fg-400 max-w-xl">
               Thoughts on backend engineering, distributed systems,
-              infrastructure, and building things that scale.
+              infrastructure, culture and whatever I learn.
             </p>
           </header>
 
