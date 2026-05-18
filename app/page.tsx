@@ -6,6 +6,7 @@ import { Experience } from "@/components/ui/sections/experience";
 import Image from "next/image";
 import { ReactNode, useState } from "react";
 import ProjectsGrid from "@/components/ui/sections/project";
+import BlogPreview from "@/components/ui/sections/blog-preview";
 import { PROJECTS } from "@/content/user-data";
 import Footer from "@/components/ui/sections/footer";
 
@@ -33,6 +34,7 @@ export default function Home() {
         <HeroSection />
         <Experience />
         <ProjectsGrid projects={PROJECTS} />
+        <BlogPreview />
       </PageContainer>
       <Footer />
     </>

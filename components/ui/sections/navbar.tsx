@@ -16,6 +16,12 @@ export default function Navbar() {
 
       <div className="flex items-center gap-6">
         <Link
+          href="/blogs"
+          className="text-sm font-medium text-theme-fg-300 hover:text-theme-fg transition-colors"
+        >
+          Blogs
+        </Link>
+        <Link
           href="/nexctl"
           className="text-sm font-medium text-theme-fg-300 hover:text-theme-fg transition-colors"
         >
