@@ -26,16 +26,16 @@ export default function Navbar() {
 
       <div className="flex items-center gap-6">
         <Link
-          href="/blogs"
+          href="/workflow"
           className="text-sm font-medium text-theme-fg-300 hover:text-theme-fg transition-colors relative after:absolute after:bottom-[-2px] after:left-0 after:h-[1.5px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
         >
-          Blogs
+          Workflow
         </Link>
         <Link
-          href="/nexctl"
+          href="/cli"
           className="text-sm font-medium text-theme-fg-300 hover:text-theme-fg transition-colors relative after:absolute after:bottom-[-2px] after:left-0 after:h-[1.5px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
         >
-          Nexctl
+          CLI
         </Link>
         <ThemeToggle />
       </div>
