@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Stack_Sans_Headline } from "next/font/google";
 import "./globals.css";
 import Providers from "./providers";
+import IntroOverlay from "@/components/intro/intro-overlay";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -38,8 +39,10 @@ export default function RootLayout({
   transition-colors duration-300`}
       >
         
-        <Providers>{children}</Providers>
-        {/* {children} */}
+        <Providers>
+          <IntroOverlay />
+          {children}
+        </Providers>
       </body>
     </html>
   );
