@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { motion, useReducedMotion } from "framer-motion";
 import { BETA, USER_DATA } from "@/content/user-data";
