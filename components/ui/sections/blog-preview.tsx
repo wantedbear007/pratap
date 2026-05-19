@@ -5,6 +5,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { fetchBlogs } from "@/lib/api/blogs";
 import type { Blog } from "@/types/blog.t";
+import { Reveal } from "../enhancers/motion-utils";
 
 function stripHtml(html: string): string {
   return html.replace(/<[^>]*>/g, "");
@@ -55,34 +56,36 @@ export default function BlogPreview() {
 
   return (
     <section className="py-8 sm:py-12">
-      <div className="flex items-end justify-between mb-6 sm:mb-8">
-        <div>
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-theme-fg">
-            Latest from the blog
-          </h2>
-          <p className="mt-1.5 text-sm text-theme-fg-400 max-w-md">
-            Thoughts on backend engineering, distributed systems, and
-            infrastructure.
-          </p>
-        </div>
-        <Link
-          href="/blogs"
-          className="hidden sm:inline-flex items-center gap-1.5 text-sm font-medium text-theme-fg-400 hover:text-theme-fg transition-colors shrink-0"
-        >
-          View all
-          <svg
-            className="w-4 h-4"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            aria-hidden
+      <Reveal>
+        <div className="flex items-end justify-between mb-6 sm:mb-8">
+          <div>
+            <h2 className="text-xl sm:text-2xl md:text-3xl font-semibold text-theme-fg">
+              Latest from the blog
+            </h2>
+            <p className="mt-1.5 text-sm text-theme-fg-400 max-w-md">
+              Thoughts on backend engineering, distributed systems, and
+              infrastructure.
+            </p>
+          </div>
+          <Link
+            href="/blogs"
+            className="hidden sm:inline-flex items-center gap-1.5 text-sm font-medium text-theme-fg-400 hover:text-theme-fg transition-colors shrink-0"
           >
-            <path d="M5 12h14" />
-            <path d="m12 5 7 7-7 7" />
-          </svg>
-        </Link>
-      </div>
+            View all
+            <svg
+              className="w-4 h-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              aria-hidden
+            >
+              <path d="M5 12h14" />
+              <path d="m12 5 7 7-7 7" />
+            </svg>
+          </Link>
+        </div>
+      </Reveal>
 
       <motion.div
         variants={container}

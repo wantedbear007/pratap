@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 import { TRAITS_PAGE } from "@/content/user-data";
 import { TraitsPage } from "@/types/traints.t";
+import { Reveal, StaggerWrapper, StaggerItem, staggerItem } from "../ui/enhancers/motion-utils";
 
 type Props = {
   data?: TraitsPage[];
@@ -25,49 +26,56 @@ export default function TraitsSection({ data = TRAITS_PAGE }: Props) {
               </div>
 
               <div className="mt-2 md:mt-0">
-                <p className="text-xs sm:text-sm text-theme-fg-400 mb-3 sm:mb-4">
-                  {exp.date}
-                </p>
-                <h2 className="text-lg sm:text-2xl md:text-3xl font-semibold mb-3 sm:mb-4 text-theme-fg">
-                  {exp.heading}
-                </h2>
-                <p className="text-sm sm:text-base text-theme-fg-300 mb-3 sm:mb-4 max-w-prose">
-                  {exp.intro}
-                </p>
-                {exp.subIntro && (
-                  <p className="text-sm sm:text-base text-theme-fg-300 mb-4 sm:mb-6">
-                    {exp.subIntro}
+                <Reveal>
+                  <p className="text-xs sm:text-sm text-theme-fg-400 mb-3 sm:mb-4">
+                    {exp.date}
                   </p>
+                </Reveal>
+                <Reveal>
+                  <h2 className="text-lg sm:text-2xl md:text-3xl font-semibold mb-3 sm:mb-4 text-theme-fg">
+                    {exp.heading}
+                  </h2>
+                </Reveal>
+                <Reveal>
+                  <p className="text-sm sm:text-base text-theme-fg-300 mb-3 sm:mb-4 max-w-prose">
+                    {exp.intro}
+                  </p>
+                </Reveal>
+                {exp.subIntro && (
+                  <Reveal>
+                    <p className="text-sm sm:text-base text-theme-fg-300 mb-4 sm:mb-6">
+                      {exp.subIntro}
+                    </p>
+                  </Reveal>
                 )}
 
-                <ol className="space-y-4 sm:space-y-5 md:space-y-6">
+                <StaggerWrapper className="space-y-4 sm:space-y-5 md:space-y-6">
                   {exp.items.map((it, idx) => (
-                    <li
-                      key={it.title}
-                      className="flex gap-3 sm:gap-4 md:gap-6 items-start"
-                    >
-                      <div className="flex-shrink-0">
-                        <span className="font-semibold text-base sm:text-lg text-theme-fg-200">
-                          {idx + 1}.
-                        </span>
-                      </div>
+                    <StaggerItem key={it.title}>
+                      <div className="flex gap-3 sm:gap-4 md:gap-6 items-start">
+                        <div className="flex-shrink-0">
+                          <span className="font-semibold text-base sm:text-lg text-theme-fg-200">
+                            {idx + 1}.
+                          </span>
+                        </div>
 
-                      <div>
-                        <h3 className="text-sm sm:text-base font-medium text-theme-fg">
-                          {it.title}
-                        </h3>
-                        <p className="text-xs sm:text-sm md:text-base text-theme-fg-300 mt-1 max-w-prose">
-                          {it.body}
-                        </p>
+                        <div>
+                          <h3 className="text-sm sm:text-base font-medium text-theme-fg">
+                            {it.title}
+                          </h3>
+                          <p className="text-xs sm:text-sm md:text-base text-theme-fg-300 mt-1 max-w-prose">
+                            {it.body}
+                          </p>
+                        </div>
                       </div>
-                    </li>
+                    </StaggerItem>
                   ))}
-                </ol>
+                </StaggerWrapper>
               </div>
             </div>
 
             {/* Right column: image card */}
-            <div className="md:col-span-5 flex justify-center md:justify-end items-start">
+            <Reveal className="md:col-span-5 flex justify-center md:justify-end items-start">
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 className="w-full max-w-sm rounded-xl overflow-hidden shadow-lg"
@@ -91,7 +99,7 @@ export default function TraitsSection({ data = TRAITS_PAGE }: Props) {
                   </div>
                 </div>
               </motion.div>
-            </div>
+            </Reveal>
           </div>
         </section>
       ))}

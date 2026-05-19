@@ -7,6 +7,7 @@ import BlogCard from "@/components/helpers/blog-card";
 import Footer from "@/components/ui/sections/footer";
 import { fetchBlogs } from "@/lib/api/blogs";
 import type { Blog } from "@/types/blog.t";
+import { Reveal, StaggerWrapper, StaggerItem } from "@/components/ui/enhancers/motion-utils";
 
 function Skeleton() {
   return (
@@ -72,15 +73,17 @@ export default function BlogsPage() {
       <Navbar />
       <PageContainer>
         <section className="py-8 sm:py-12 md:py-16">
-          <header className="mb-8 sm:mb-10">
-            <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-theme-fg">
-              Blogs
-            </h1>
-            <p className="mt-2 text-sm sm:text-base text-theme-fg-400 max-w-xl">
-              Thoughts on backend engineering, distributed systems,
-              infrastructure, culture and whatever I learn.
-            </p>
-          </header>
+          <Reveal>
+            <header className="mb-8 sm:mb-10">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-semibold text-theme-fg">
+                Blogs
+              </h1>
+              <p className="mt-2 text-sm sm:text-base text-theme-fg-400 max-w-xl">
+                Thoughts on backend engineering, distributed systems,
+                infrastructure, culture and whatever I learn.
+              </p>
+            </header>
+          </Reveal>
 
           {loading && <Skeleton />}
 
@@ -105,11 +108,13 @@ export default function BlogsPage() {
           )}
 
           {!loading && !error && blogs.length > 0 && (
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <StaggerWrapper className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {blogs.map((blog) => (
-                <BlogCard key={blog.id} blog={blog} />
+                <StaggerItem key={blog.id}>
+                  <BlogCard blog={blog} />
+                </StaggerItem>
               ))}
-            </div>
+            </StaggerWrapper>
           )}
         </section>
       </PageContainer>

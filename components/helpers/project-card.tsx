@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { motion } from "framer-motion";
 import { Project } from "@/types/project.t";
 
 type Props = {
@@ -12,7 +13,11 @@ export default function ProjectCard({ project }: Props) {
   const techs = project.techs ?? [];
 
   return (
-    <article className="group bg-theme-bg-200 rounded-2xl border border-theme-bg-300 shadow-theme-lg hover:shadow-theme-xl transition-shadow duration-200 overflow-hidden h-full">
+    <motion.article
+      whileHover={{ y: -4 }}
+      transition={{ duration: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
+      className="group bg-theme-bg-200 rounded-2xl border border-theme-bg-300 shadow-theme-lg hover:shadow-theme-xl transition-shadow duration-300 overflow-hidden h-full"
+    >
       <div className="flex flex-col md:flex-row h-full">
         <div className="p-6 md:flex-1 md:pr-4 lg:pr-6 flex flex-col justify-between">
           <div>
@@ -124,19 +129,19 @@ export default function ProjectCard({ project }: Props) {
           </div>
         </div>
 
-        <div className="relative w-full h-44 md:h-auto md:w-40 lg:w-48 flex-shrink-0">
+        <div className="relative w-full h-44 md:h-auto md:w-40 lg:w-48 flex-shrink-0 overflow-hidden">
           <Image
             src={project.image}
             alt={project.imageAlt ?? project.title}
             fill
-            className="object-cover rounded-tr-2xl rounded-br-2xl md:rounded-none"
+            className="object-cover rounded-tr-2xl rounded-br-2xl md:rounded-none transition-transform duration-300 group-hover:scale-105"
             sizes="(max-width: 640px) 100vw, 200px"
             priority={false}
           />
 
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-200 rounded-tr-2xl rounded-br-2xl md:rounded-none" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded-tr-2xl rounded-br-2xl md:rounded-none" />
         </div>
       </div>
-    </article>
+    </motion.article>
   );
 }

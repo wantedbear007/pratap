@@ -1,10 +1,18 @@
 import Link from "next/link";
+import { motion, useReducedMotion } from "framer-motion";
 import { BETA, USER_DATA } from "@/content/user-data";
 import ThemeToggle from "../enhancers/theme-toggle";
 
 export default function Navbar() {
+  const prefersReduced = useReducedMotion();
+
   return (
-    <nav className="w-full flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-4 sm:py-6 md:py-8 lg:py-10 bg-theme-bg-100">
+    <motion.nav
+      initial={prefersReduced ? undefined : { opacity: 0, y: -12 }}
+      animate={prefersReduced ? undefined : { opacity: 1, y: 0 }}
+      transition={{ duration: 0.5, ease: [0.25, 0.1, 0.25, 1] }}
+      className="w-full flex items-center justify-between px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16 2xl:px-20 py-4 sm:py-6 md:py-8 lg:py-10 bg-theme-bg-100"
+    >
       <Link href="/" className="text-lg sm:text-xl md:text-2xl font-semibold font-stack-headline text-theme-fg flex items-center gap-2">
         {USER_DATA.name}
         {BETA && (
@@ -17,18 +25,18 @@ export default function Navbar() {
       <div className="flex items-center gap-6">
         <Link
           href="/blogs"
-          className="text-sm font-medium text-theme-fg-300 hover:text-theme-fg transition-colors"
+          className="text-sm font-medium text-theme-fg-300 hover:text-theme-fg transition-colors relative after:absolute after:bottom-[-2px] after:left-0 after:h-[1.5px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
         >
           Blogs
         </Link>
         <Link
           href="/nexctl"
-          className="text-sm font-medium text-theme-fg-300 hover:text-theme-fg transition-colors"
+          className="text-sm font-medium text-theme-fg-300 hover:text-theme-fg transition-colors relative after:absolute after:bottom-[-2px] after:left-0 after:h-[1.5px] after:w-0 after:bg-current after:transition-all after:duration-300 hover:after:w-full"
         >
           Nexctl
         </Link>
         <ThemeToggle />
       </div>
-    </nav>
+    </motion.nav>
   );
 }
