@@ -29,7 +29,7 @@ export const USER_DATA = {
   facebook: "https://facebook.com/bhanupratapsingh",
 
   resume:
-    "https://drive.google.com/file/d/10WTX285lIoyUWMopgEH6E7Ib-amKcsXp/view?usp=sharing",
+    "https://drive.google.com/file/d/1xaX8Wb60q_eGvVRo46x35UifRdHjoEee/view?usp=sharing",
 };
 
 export const TAG_LINES = {
